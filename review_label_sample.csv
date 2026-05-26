@@ -1,0 +1,67 @@
+﻿comment,sentimen,skor,alasan
+bisa aja ngeles yaa 😂,negative,-1.25,neg=['berkilah'] pos=[] emoji=-0.5
+tolong di usut yang mengedit vidio.. tangkap aja.,neutral,0.0,(tidak ada sinyal sentimen)
+"liat itu real
+liat aja mulut nya",neutral,0.0,(tidak ada sinyal sentimen)
+video asli bru muncul setelah beliau mengundurkan diri dr jabatannya 🤦‍♀️,neutral,0.0,(tidak ada sinyal sentimen)
+hoak nya di mana AI maksud nya gua yg suka bikin vidio AI tau kali😭😭😭,neutral,0.0,(tidak ada sinyal sentimen)
+Lah sri mulyani pintar kan Karna guru,positive,1.0,neg=[] pos=['pintar'] emoji=0.0
+tebak umur kreator,neutral,0.0,(tidak ada sinyal sentimen)
+"mulyani ""m"" nya ap?",neutral,0.0,(tidak ada sinyal sentimen)
+yang IA yang mana?😅,negative,-0.25,neg=[] pos=[] emoji=-0.5
+Tampa guru nggak mungkin ibu jd begini,neutral,0.0,(tidak ada sinyal sentimen)
+ai gak sih soalnya langsung matanya ke kamera gitu?,neutral,0.0,(tidak ada sinyal sentimen)
+AI A*J😌😌,neutral,0.0,(tidak ada sinyal sentimen)
+di bayar berapa min??,negative,-2.0,neg=['[bayar berapa]'] pos=[] emoji=0.0
+maling itu beban siapa bu,negative,-3.0,"neg=['maling', 'beban'] pos=[] emoji=0.0"
+"guru sudah mengajarkan anda tapi apa
+balasan nya coba",neutral,0.0,(tidak ada sinyal sentimen)
+Sri Mulyani mahluk apa nya nanya,neutral,0.0,(tidak ada sinyal sentimen)
+kasian ...ibu mulyani adalah aset negara...orang pintar ini di akui dunia,positive,2.0,"neg=[] pos=['kasian', 'pintar'] emoji=0.0"
+aduh dibayar berapa min,negative,-2.0,neg=['[bayar berapa]'] pos=[] emoji=0.0
+bocil fomo pada percaya AI 😹,negative,-0.25,neg=[] pos=[] emoji=-0.5
+emg lu dulu belajar gk diajar guru😂😂,negative,-0.5,neg=[] pos=[] emoji=-1.0
+"Cerdas lah dlm bermain Sosmed .. pke logika apa iya Ibu secerdas ini ngmg kayak gitu . Melukai hati rakyat khususnya guru ,,tapi nitizen percaya ,, sy dri awal ga percaya Ibu ngmg gitu",positive,2.0,neg=[] pos=['cerdas'] emoji=0.0
+APARAT KEPOLISIAN TLNG DI USUT YG MENGEDIT UCAPAN IBU SRI MULYANI.. HARUS DI TINDAK BIAR KAPOK,neutral,0.0,(tidak ada sinyal sentimen)
+hadeh negara koruptor gini amat 😹,negative,-2.25,neg=['koruptor'] pos=[] emoji=-0.5
+"tanpa guru,dia egk bakalan jadi mentri",negative,-1.0,neg=['[tanpa guru]'] pos=[] emoji=0.0
+"pandai nya lidah mu memutar balik kata, 😂😂😂",negative,-2.75,"neg=['[memutar balik]', '[balik kata]'] pos=['pandai'] emoji=-1.5"
+ati 2 ngomong bu apa dulu ngak sekola bu,neutral,0.0,(tidak ada sinyal sentimen)
+giliran kita yang pura² gak denger 😂,negative,-0.25,neg=[] pos=[] emoji=-0.5
+DPR gaji 3 jt per hari,neutral,0.0,(tidak ada sinyal sentimen)
+Ai wkwkw di salah gunakan yh gini sama konohaa maklum lah😹😹,negative,-0.5,neg=[] pos=[] emoji=-1.0
+"tapi kayak AI sih memang yg pertama nada bicara sama ekspresi pas diakhir agak senyum terus mata kedip dikit, senyumnya juga senyum yg ga human",neutral,0.0,(tidak ada sinyal sentimen)
+di bayar berapa min😹😹😹,negative,-2.75,neg=['[bayar berapa]'] pos=[] emoji=-1.5
+"hadehh bahaya ni mimin mulai bisa di sogok juga,🙄",negative,-4.25,"neg=['bahaya', 'sogok', '[di sogok]'] pos=[] emoji=-0.5"
+sama aja intinya sri,negative,-1.0,neg=['[sama saja]'] pos=[] emoji=0.0
+"bukan beban bu, tolong diralat, guru itu tanggung jawab negara bu",positive,2.0,"neg=[] pos=['beban(neg)', '[tanggung jawab negara]'] emoji=0.0"
+benar ucapan ibu sri mulyani🙏🙏 kan guru pahlawan tanpa tanda jasa harus nya berbagi ilmu dengan ikhlas,positive,10.0,"neg=[] pos=['pahlawan', 'ikhlas', '[guru pahlawan]', '[pahlawan tanpa tanda jasa]', '[tanpa tanda jasa]'] emoji=2.0"
+Saya fikir bu sri ini pintar dan bijaksana.,positive,3.0,"neg=[] pos=['pintar', 'bijaksana'] emoji=0.0"
+Kasian Bu Sri Mulyani 🥺 gara2 editan Ai dan orng yg edit ibu jd di Bully masyarakat yg gak tau cari dlu kebenaran nya hiks,positive,1.5,neg=[] pos=['kasian'] emoji=1.0
+Sri Mulyani Mentri terbaik,positive,2.0,neg=[] pos=['terbaik'] emoji=0.0
+kasihan bngt ibu Sri Mulyani yg sudah terbukti kecerdasannya,positive,1.0,neg=[] pos=['kasihan'] emoji=0.0
+wow keren anda Sri,positive,1.0,neg=[] pos=['keren'] emoji=0.0
+kira kita percaya 😊,positive,0.5,neg=[] pos=[] emoji=1.0
+"mski sya guru yg GK pintar tapi dari prtma ada isu ini sya sama sekali GK prcya, sya LBH percaya dg ibu Sri, ibu Sri buat sya menkeu terbaik",positive,3.0,"neg=['pintar(neg)'] pos=['terbaik', '[menkeu terbaik]'] emoji=0.0"
+orang baik selalu di singkirkan 😳,positive,2.0,"neg=[] pos=['baik', '[orang baik]'] emoji=0.0"
+guru adalah pahlawan tanpa jasa,positive,2.0,neg=[] pos=['pahlawan'] emoji=0.0
+Kalau ga ada guru ga bakalan mulyani pinter muterin duit😂,positive,0.75,neg=[] pos=['pinter'] emoji=-0.5
+"ibu waktu masih disekolah yang ngajar,patung garuda😂",negative,-0.25,neg=[] pos=[] emoji=-0.5
+"klo apa"" alasannya AI entah benar atau tidak. ya semua aja AI dijadikan Alasan. yang klarifikasi itu AI apa bukan? Eko, uya kuya, sahroni klarifikasi itu AI atau bukan?",neutral,0.0,(tidak ada sinyal sentimen)
+Gue habis wd 𝟏𝟒𝐣𝐭 𝐛𝐢𝐥𝐞𝐤,neutral,0.0,(tidak ada sinyal sentimen)
+ingat bre di jepang gaji guru lebih diutamakan dari pada presiden,neutral,0.0,(tidak ada sinyal sentimen)
+bukan hewan langka tapi tetap saja di lindungi,neutral,0.0,(tidak ada sinyal sentimen)
+herannya guru² jg byk yg percaya pas itu sampai bikin vt segala macam🤣,negative,-0.25,neg=[] pos=[] emoji=-0.5
+ai sangat bahaya!!!!,negative,-1.0,neg=['bahaya'] pos=[] emoji=0.0
+"dikira dia kita anak tk apa?
+mudah di tipu",negative,-1.0,neg=['tipu'] pos=[] emoji=0.0
+"""apakah gaji guru harus di tanggung negara atau ada partisipasi masyarakat""
+ini udah nganggep kalo nge gaji guru, ga perlu pemerintah",neutral,0.0,(tidak ada sinyal sentimen)
+kok banyak banget akun centang biru post tentang Sri Mulyani hoak,neutral,0.0,(tidak ada sinyal sentimen)
+usut polisi siapa yg edit vidionya,neutral,0.0,(tidak ada sinyal sentimen)
+mogok mengajar selama 1 thn penuh biar kt lihat seperti apa dampak nya,neutral,0.0,(tidak ada sinyal sentimen)
+"Guru harus mampu memfilter berita yang bertebaran di SOSMED, ketidak mampuan untuk bertabayyun dalam merespon segala hal di sosmed mnjdi crminan guru di indonesia.skedar mengingatkan di era digital teknologi AI sngatlah sulit di bendung untk dipergunakan,seorg maupun seklompok org,bgaimna cara mmbedakan mna audio visual yg real mnaa yg tdak? hanya seorang editor yang tau.sdkit saran jika kita semua tak mampu membedakn produk visual AI,maka silahkan bertabayyun cek sumber maka kebenaran akan di temukan",neutral,0.0,(tidak ada sinyal sentimen)
+ai ini mah🤣,negative,-0.25,neg=[] pos=[] emoji=-0.5
+bro itu keliatan frame nya,neutral,0.0,(tidak ada sinyal sentimen)
+Perburuan utama adalah mencari yg edit video ini ... Ibu Sri Mulyani tidak mengucapkan ucapan itu... sekarang netizen juga harus adil.... ketika Ibu Sri Mulyani terpuruk akibat video editan ini... sekarang tugasnya netizen juga untuk memperbaiki nama Ibu Sri Mulyani... dengan cara buru dan temukan pelaku yang mengedit video ini...,neutral,0.0,(tidak ada sinyal sentimen)
+"t-api bu. uang negarakan emang partisipasi masyarakat, lewat pajak",neutral,0.0,(tidak ada sinyal sentimen)

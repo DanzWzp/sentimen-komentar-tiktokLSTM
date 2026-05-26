@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import tensorflow\")",
+      "Bash(pip show *)",
+      "Bash(python -c \"import urllib3; print\\('urllib3', urllib3.__version__\\)\")"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+# Dependensi proyek analisis sentimen (Python 3.10+)
+urllib3>=2.2,<3        # WAJIB: urllib3 1.25.x rusak di Python 3.13 -> TF gagal import
+pandas
+numpy
+scikit-learn
+imbalanced-learn
+tensorflow>=2.16
+gensim
+nltk
+Sastrawi
+openpyxl                # baca komentar_tiktok.xlsx
+flask>=3.0
+matplotlib
+seaborn

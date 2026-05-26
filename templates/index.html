@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deteksi Sentimen Komentar — LSTM + Word2Vec</title>
+  <style>
+    :root {
+      --neg: #e74c3c; --neu: #95a5a6; --pos: #27ae60; --bg: #0f172a; --card: #1e293b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; font-family: "Segoe UI", system-ui, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e3a5f); color: #e2e8f0;
+      display: flex; justify-content: center; padding: 32px 16px;
+    }
+    .wrap { width: 100%; max-width: 720px; }
+    h1 { font-size: 1.6rem; margin: 0 0 4px; }
+    .sub { color: #94a3b8; margin: 0 0 24px; font-size: .9rem; }
+    .card { background: var(--card); border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+    textarea {
+      width: 100%; min-height: 110px; resize: vertical; border-radius: 10px; padding: 14px;
+      border: 1px solid #334155; background: #0f172a; color: #e2e8f0; font-size: 1rem; font-family: inherit;
+    }
+    textarea:focus { outline: none; border-color: #38bdf8; }
+    .row { display: flex; gap: 12px; align-items: center; margin-top: 14px; }
+    button {
+      background: #38bdf8; color: #082f49; border: none; padding: 12px 22px; border-radius: 10px;
+      font-size: 1rem; font-weight: 700; cursor: pointer; transition: .15s;
+    }
+    button:hover { background: #0ea5e9; }
+    .hint { color: #64748b; font-size: .8rem; }
+    .result { margin-top: 22px; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 12px;
+      font-size: 1.3rem; font-weight: 800; color: #fff;
+    }
+    .badge.negative { background: var(--neg); }
+    .badge.neutral  { background: var(--neu); }
+    .badge.positive { background: var(--pos); }
+    .conf { color: #cbd5e1; margin-left: 10px; font-size: .95rem; font-weight: 600; }
+    .bars { margin-top: 18px; display: grid; gap: 10px; }
+    .bar-label { display: flex; justify-content: space-between; font-size: .85rem; margin-bottom: 3px; }
+    .track { background: #0f172a; border-radius: 8px; height: 14px; overflow: hidden; }
+    .fill { height: 100%; border-radius: 8px; transition: width .4s; }
+    .fill.negative { background: var(--neg); }
+    .fill.neutral  { background: var(--neu); }
+    .fill.positive { background: var(--pos); }
+    .meta { margin-top: 18px; font-size: .82rem; color: #94a3b8; border-top: 1px solid #334155; padding-top: 12px; }
+    .meta code { background: #0f172a; padding: 2px 6px; border-radius: 5px; color: #7dd3fc; }
+    .note { background: #422006; color: #fbbf24; padding: 10px 14px; border-radius: 8px; margin-top: 14px; font-size: .85rem; }
+    .examples { margin-top: 14px; font-size: .82rem; color: #64748b; }
+    .examples span { cursor: pointer; color: #7dd3fc; text-decoration: underline; }
+    footer { margin-top: 18px; text-align: center; color: #475569; font-size: .78rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>🎯 Deteksi Sentimen Komentar</h1>
+    <p class="sub">Model LSTM + Word2Vec — klasifikasi Negatif / Netral / Positif (Bahasa Indonesia)</p>
+
+    <div class="card">
+      <form method="POST" action="/">
+        <textarea id="comment" name="comment" placeholder="Ketik atau tempel komentar di sini..."
+                  required>{{ text }}</textarea>
+        <div class="row">
+          <button type="submit">Analisis Sentimen</button>
+          <span class="hint">Tekan tombol untuk mendeteksi sentimen komentar.</span>
+        </div>
+      </form>
+
+      <div class="examples">
+        Contoh:
+        <span onclick="setEx(this)">Sri Mulyani guru beban negara, dibayar berapa min?</span> ·
+        <span onclick="setEx(this)">Ibu Sri Mulyani terbaik, sehat selalu bu 🙏</span> ·
+        <span onclick="setEx(this)">Ini video AI atau asli ya?</span>
+      </div>
+
+      {% if result %}
+      <div class="result">
+        <span class="badge {{ result.label }}">{{ result.emoji }} {{ result.label_id }}</span>
+        <span class="conf">keyakinan {{ '%.1f'|format(result.confidence * 100) }}%</span>
+
+        {% if result.note %}<div class="note">{{ result.note }}</div>{% endif %}
+
+        <div class="bars">
+          {% for name in ['negative', 'neutral', 'positive'] %}
+          {% set p = result.probabilities.get(name, 0) %}
+          <div>
+            <div class="bar-label">
+              <span>{{ {'negative':'Negatif','neutral':'Netral','positive':'Positif'}[name] }}</span>
+              <span>{{ '%.1f'|format(p * 100) }}%</span>
+            </div>
+            <div class="track"><div class="fill {{ name }}" style="width: {{ p * 100 }}%"></div></div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="meta">
+          Teks setelah pra-pemrosesan: <code>{{ result.text_final or '(kosong)' }}</code>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <footer>
+      Model: <code>{{ info.model_name }}</code> · maxlen={{ info.maxlen }} ·
+      analisis sentimen komentar TikTok
+    </footer>
+  </div>
+
+  <script>
+    function setEx(el) {
+      document.getElementById('comment').value = el.textContent.trim();
+      document.getElementById('comment').focus();
+    }
+  </script>
+</body>
+</html>

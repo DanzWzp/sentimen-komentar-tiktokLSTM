@@ -1,0 +1,14 @@
+{
+  "vocab_size": 2051,
+  "embedding_dim": 100,
+  "max_sequence_length": 16,
+  "lstm_units": 128,
+  "dense_units": 64,
+  "dropout_rate": 0.4,
+  "learning_rate": 0.001,
+  "batch_size": 32,
+  "epochs": 20,
+  "patience": 4,
+  "num_classes": 3,
+  "validation_split": 0.2
+}
