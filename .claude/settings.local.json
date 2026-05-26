@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(python -c \"import tensorflow as tf; print\\('TF_RESULT', tf.__version__\\)\")",
-      "Bash(echo \"EXIT: $?\")",
-      "Bash(rm -f err.txt)"
-    ]
-  }
-}
